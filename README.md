@@ -8,8 +8,6 @@ MySQL Workbench 8.0
 
 PHP
 
-HTML
-
 CSS
 
 # Requisitos do Sistema
