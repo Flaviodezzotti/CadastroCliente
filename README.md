@@ -1,6 +1,6 @@
 # CadastroCliente
 
-Sistema de cadastro de clientes simples.
+Sistema de cadastro de clientes simples sem aplicação de segurança.
 
 # Tecnologia
 
