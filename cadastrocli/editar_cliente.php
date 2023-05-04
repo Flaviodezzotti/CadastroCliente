@@ -11,7 +11,7 @@
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
 ?>
-
+ 
 <form action="atualizar_cliente.php" method="POST">
     <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
     <label>Nome:</label>

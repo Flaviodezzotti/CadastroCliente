@@ -9,10 +9,9 @@
     <?php
     session_start();
     include('conexao.php');
-
-    // Verifica se a conexão foi estabelecida com sucesso
+    
         if (!$conn) {
-        die("Conexão falhou: " . mysqli_connect_error()); }
+             die("Conexão falhou: " . mysqli_connect_error()); }
 
    
     // Verifica se o formulário foi submetido
@@ -30,7 +29,7 @@
 
     // Executa a query SQL
         if (mysqli_query($conn, $sql)) 
-            {echo "<strong>Cadastro de novo cliente feito com sucesso!</strong>";}            
+            {echo "<strong><div style='text-align: center;'>Cadastro de novo cliente feito com sucesso!</div></strong>";}            
          else 
             {echo "<strong>Erro ao cadastrar o cliente:</strong> " . mysqli_error($conn);}          
        
@@ -47,24 +46,29 @@
     // Exibe os dados dos clientes em uma tabela
         echo "<table>";
         echo "<tr><th>Nome</th>
-        <th>Email</th>
-        <th>Telefone</th>
-        <th>Endereço</th>
-        <th>Ações</th></tr>";
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Ações</tr></th>";
+                
         
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr><td>".$row["nome"]."</td>
-                      <td>".$row["email"]."</td>
-                      <td>".$row["telefone"]."</td>
-                      <td>".$row["endereco"]."</td>
-                      <td><a href='editar_cliente.php?id=".$row["id"]."'>Editar</a></td></tr>";
-                  }        
-                                                                                      
+                    <td>".$row["email"]."</td>
+                    <td>".$row["telefone"]."</td>
+                    <td>".$row["endereco"]."</td>
+                    <td><a href='editar_cliente.php?id=".$row["id"]."'>Editar</a><td></a><a href='excluir_cliente.php?id=".$row['id']."'>Excluir</a></tr></td>";
+                                     
+
+                  }     
+                    
+                                                                                  
         echo "</table>";        
       } 
 
         else {
-        echo "Nenhum cliente cadastrado.";}
+            echo "<div style='text-align: center;'>Nenhum cliente cadastrado.</div>";
+            }
      
     // Fecha a conexão com o banco de dados
      mysqli_close($conn);
