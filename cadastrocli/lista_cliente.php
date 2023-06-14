@@ -57,9 +57,9 @@
                     <td>".$row["email"]."</td>
                     <td>".$row["telefone"]."</td>
                     <td>".$row["endereco"]."</td>
-                    <td><a href='editar_cliente.php?id=".$row["id"]."'>Editar</a><td></a><a href='excluir_cliente.php?id=".$row['id']."'>Excluir</a></tr></td>";
-                                     
-
+                    <td><a href='editar_cliente.php?id=".$row["id"]."'>Editar</a></td>
+                    <td><a href='excluir_cliente.php?id=".$row['id']."'>Excluir</a></td>
+                    <td><a href='detalhes_cliente.php?id=".$row['id']."'>Detalhes</a></td></tr>";                                  
                   }     
                     
                                                                                   
