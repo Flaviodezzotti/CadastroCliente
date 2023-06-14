@@ -19,6 +19,8 @@ SS03 - Será possível editar os clientes.
 
 SS04 - Será possível excluir clientes cadastrados.
 
+SS05 - Sistema deverá buscar o cliente cadastrado.
+
 # Link do Board
 
 https://github.com/users/Flaviodezzotti/projects/4/views/1
